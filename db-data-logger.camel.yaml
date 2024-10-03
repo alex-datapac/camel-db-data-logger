@@ -1,0 +1,18 @@
+- route:
+    id: route-2113
+    from:
+      id: from-1065
+      uri: kamelet:postgresql-source
+      parameters:
+        databaseName: defaultdb
+        delay: "10000"
+        password: AVNS_y4njoH1bePFkbkBTiwE
+        query: SELECT * FROM employees
+        serverName: pg-9a244b9-project-f201.l.aivencloud.com
+        serverPort: "15094"
+        username: avnadmin
+      steps:
+        - to:
+            id: to-4202
+            uri: log:InfoLogger
+            parameters: {}
